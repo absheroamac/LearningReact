@@ -1,0 +1,59 @@
+body {
+  animation: intro 1.5s ease-out forwards;
+  background-color: aquamarine;
+}
+
+.Card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 35px;
+  padding-bottom: 40px;
+  margin: 60px;
+  gap: 16px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+@keyframes intro {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.Card:hover {
+  transform: translateY(50px);
+  padding: 60px;
+  clip-path: circle(75% at 50% 50%);
+}
+
+.Card:hover .button {
+  background-color: blueviolet;
+}
+
+.button:hover {
+  background-color: blueviolet;
+}
